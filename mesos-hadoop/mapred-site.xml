@@ -1,4 +1,5 @@
-<property>
+<configuration>
+  <property>
   <name>mapred.job.tracker</name>
   <value>172.17.42.1:9001</value>
 </property>
@@ -18,3 +19,4 @@
   <name>mapred.mesos.executor.uri</name>
   <value>hdfs://172.17.42.1:9000/hadoop-2.6.0-cdh5.4.7.tar.gz</value>
 </property>
+</configuration>

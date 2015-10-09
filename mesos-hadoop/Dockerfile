@@ -60,7 +60,12 @@ ADD yarn-site.xml $HADOOP_PREFIX/etc/hadoop/yarn-site.xml
 
 RUN $HADOOP_PREFIX/bin/hdfs namenode -format
 
+
 # fixing the libhadoop.so like a boss
+
+# download native support
+RUN mkdir -p /tmp/native
+RUN curl -Ls http://dl.bintray.com/sequenceiq/sequenceiq-bin/hadoop-native-64-2.7.0.tar | tar -x -C /tmp/native
 RUN rm -rf /usr/local/hadoop/lib/native
 RUN mv /tmp/native /usr/local/hadoop/lib
 
